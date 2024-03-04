@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Decodificador de Texto</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/img/alura-logo.png" alt="Logo da Alura azul composto por um 'a'" class="alura-logo-desktop">
+        <img src="./assets/img/Top.png" alt="Logo da Alura azul composto por um 'a'" class="alura-logo-mobile">
+
+
+        <div class="switch" id="switch">
+            <div class="toggle"></div>
+        </div>
+
+    </header>
+    <main class="content">
+        <section class="content-input">
+            
+            <textarea placeholder="Digite seu texto" class="content-input-text"></textarea>
+
+            <div class="content-warning-input">
+            <img src="./assets/img/exclamation.png" alt="Círculo preenchido de cinza com um ponto de exclamação branco dentro" class="warning-img">
+            <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            
+            <div class="main-buttons">
+            <button class="input-button" id="encrypt-button">Criptografar</button>
+            <button class="input-button" id="decrypt-button">Descriptografar</button>
+            </div>
+        </section>
+
+        <section class="content-output">
+            <div class="output-decoded">
+            <p class="output-text" id="output-text"></p>
+            <button id="output-copy-button">Copiar</button>
+            </div>
+            <div class="content-output-details">
+            <img src="./assets/img/desktop-img.svg" alt="Pessoa com uma lupa investigando um diamante">
+            <h2>Nenhuma mensagem válida encontrada</h2>
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    --main-bg: #f3f5fc;
+    --sec-bg: white;
+    --ter-bg: #D8DFE8;
+    --four-bg: #f3f5fc;
+
+    --txt-first: #343A40;
+    --txt-second: #495057;
+    --txt-third: #D8DFE8;
+    --txt-four: #0a3871;
+    
+    --highlight: #0a3871;
+
+    --btn-encrypt-bgcolor: #0a3871;
+    --btn-decrypt-bgcolor: #D8DFE8;
+
+    --btn-encrypt-txt-color: white;
+    --btn-decrypt-txt-color: #0a3871;
+
+    --btn-encrypt-border: white;
+    --btn-decrypt-border: #0a3871;
+
+    /* hover */
+    --btn-hover-bg: white;
+
+    --btn-hover-txt: #0a3871;
+
+    --btn-hover-border: #0a3871;
+
+    background-color: var(--main-bg);
+    margin: 2.5rem;
+    transition: .5s;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alura-logo-desktop {
+    width: 7.5rem;
+    height: 3rem;
+}
+
+.alura-logo-mobile {
+    display: none;
+}
+
+.switch {
+    width: 5rem;
+    height: 2.5rem;
+    background-color: #c3c3c3;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch .toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.content {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.content-input {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.content-input-text, .content-output-details h2, p, .input-button {
+    font-family: 'Inter', sans-serif;
+}
+
+.content-input-text {
+    width: 100%;
+    height: 53rem;
+    padding: 0.625rem;
+    resize: none;
+    border: none;
+    color: var(--txt-four);
+    font-size: 2rem;
+    background-color: var(--four-bg);
+}
+
+.content-warning-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.warning-img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.content-warning-input p {
+    font-size: 0.85rem;
+    color: var(--txt-second);
+}
+
+.main-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.input-button {
+    width: 40%;
+    height: 4.1875rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#encrypt-button {
+    background-color: var(--btn-encrypt-bgcolor);
+    color: var(--btn-encrypt-txt-color);
+    border-color: var(--btn-encrypt-border);
+}
+
+#encrypt-button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-txt);
+    border-color: var(--btn-hover-border);
+}
+
+#decrypt-button {
+    background-color: var(--btn-decrypt-bgcolor);
+    color: var(--btn-decrypt-txt-color);
+    border-color: var(--btn-decrypt-border);
+}
+
+#decrypt-button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-txt);
+    border-color: var(--btn-hover-border);
+}
+
+.content-output {
+    width: 30%;
+    height: 59rem;
+    background-color: var(--sec-bg);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+}
+
+.content-output-details {
+    width: 80%;
+    text-align: center;
+}
+
+.content-output-details img {
+    width: 90%;
+}
+
+.content-output-details h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--txt-first);
+}
+
+.content-output-details p {
+    color: var(--txt-second);
+}
+
+/* Output Result Decoded */
+.output-decoded {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 95%;
+    width: 90%;
+    margin: 2rem;
+    display: none;
+}
+
+.output-text {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: var(--txt-second);
+    height: 90%;
+    width: 90%;
+    resize: vertical;
+    overflow-wrap: anywhere;
+}
+
+#output-copy-button {
+    width: 90%;
+    height: 4.1875rem;
+    background-color: var(--sec-bg);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    border-color: var(--highlight);
+    color: var(--highlight);
+    border-radius: 20px;
+}
+
+#output-copy-button:hover {
+    background-color: #0a3871;
+    color: white;
+    border-color: white;
+}
+
+@media (max-width: 900px) {
+    
+    body {
+        margin: 0;
+    }
+
+    .header {
+        margin-top: 2rem;
+        margin-left: 2.5rem;
+    }
+
+    .alura-logo-desktop {
+        display: none;
+    }
+    
+    .alura-logo-mobile {
+        display: block;
+        width: 1.943125rem;
+        height: 3.16125rem;
+    }
+
+    .switch {
+        margin-right: 1.5rem;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 7.25rem;
+        width: auto;
+    }
+
+    .content-input {
+        margin-top: -70px;
+        width: 95%;
+    }
+
+    .content-input-text {
+        height: 20rem;
+    }
+
+    .main-buttons {
+        gap: 1.5rem;
+    }
+
+    .content-output {
+        width: 95%;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    .content-output-details img {
+        display: none;
+    }
+
+    .content-output-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-output-details p {
+        font-size: 1rem;
+    }
+
+    /* Output Result Decoded */
+    .output-decoded {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .main-buttons {
+        flex-direction: column;
+    }
+
+    .input-button {
+        width: 90%;
+    }
+}
+
+/* Customização do Light & Dark Mode */
+
+.switch.dark {
+    background-color: #4d4d4d;
+}
+
+.switch.dark .toggle {
+    left: 2.5rem;
+    background-color: #000;
+}
+
+body.dark {
+    --main-bg: #121212;
+    --sec-bg: #1e1e1e;
+    --four-bg: #1e1e1e;
+
+    --txt-first: white;
+    --txt-second: #f3f5fc;
+    --txt-third: #121212;
+    --txt-four: white; 
+    
+    --btn-encrypt-bgcolor: #121212;
+    --btn-decrypt-bgcolor: #121212;
+
+    --btn-encrypt-txt-color: white;
+    --btn-decrypt-txt-color: white;
+
+    --btn-encrypt-border: white;
+    --btn-decrypt-border: white;
+
+    --btn-hover-bg: #0a3871;
+
+    --btn-hover-txt: white;
+
+    --btn-hover-border: white;
+}
+
+body.dark .content-input-text {
+    outline: none;
+    border: 1px solid white;
+}
+
+body.dark #output-copy-button {
+    color: white;
+    border-color: white;
+}
