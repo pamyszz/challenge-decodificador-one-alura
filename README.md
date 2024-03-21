@@ -38,5 +38,5 @@ Interessado em contribuir? Siga os passos abaixo:
 
 ## Agradecimentos 🙏
 
-- Alura, pelo desafio e oportunidade de aprendizado.
-- Todos que contribuíram com o projeto.
+-> Alura, pelo desafio e oportunidade de aprendizado.
+-> Todos que contribuíram com o projeto. 
